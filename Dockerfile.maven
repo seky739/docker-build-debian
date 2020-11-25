@@ -1,0 +1,8 @@
+FROM debian:buster
+LABEL maintainer='Michal Sakáč <seky@civ.zcu.cz>'
+
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    default-jdk-headless \
+    maven \
+ && rm -rf /var/lib/apt/lists/*
+
